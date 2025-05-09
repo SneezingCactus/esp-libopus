@@ -10,7 +10,7 @@ list(APPEND srcs ${CELT_SOURCES}
 set(PRIV_INCLUDES "celt/" "silk/" "silk/fixed" "src/")
 
 idf_component_register(SRCS ${srcs}
-                       INCLUDE_DIRS "include"
+                       INCLUDE_DIRS . "include"
                        PRIV_INCLUDE_DIRS ${PRIV_INCLUDES})
 
 target_compile_options(${COMPONENT_LIB} PRIVATE -Wno-error=maybe-uninitialized -Wno-error=stringop-overread -DHAVE_ALLOCA_H -DHAVE_LRINT 

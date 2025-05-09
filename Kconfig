@@ -1,0 +1,9 @@
+menu "LibOpus Configuration"
+
+    config OPUS_USE_SPIRAM
+        bool "Use External RAM for Opus"
+        default n
+        help
+            Use external SPI RAM for malloc in Opus packetizer
+
+endmenu
